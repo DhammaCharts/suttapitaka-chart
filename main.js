@@ -1,4 +1,4 @@
-import 'ol/ol.css';
+import './style.css';
 import {Map, View, Overlay, Feature} from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import VectorLayer from 'ol/layer/Vector';
@@ -12,7 +12,7 @@ import {DragRotate, defaults as defaultInteractions} from 'ol/interaction';
 import {FullScreen, defaults as defaultControls} from 'ol/control';
 
 // const dataJSON = require("./data.json");
-import dataJSON from './public/data.json'
+import dataJSON from './data.json'
 
 // detect device for marker size //
 
@@ -71,7 +71,7 @@ const map = new Map({
     new TileLayer({
       extent: extent,
         source: new TileImage({
-          url: './public/maptiles/{z}/{y}/{x}.png'
+          url: './maptiles/{z}/{y}/{x}.png'
         })
     })
   ],
