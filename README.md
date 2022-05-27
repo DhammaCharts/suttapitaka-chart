@@ -2,7 +2,7 @@
 
 Interactive chart for SuttaCentral.net using D3.js and OpenLayers
 
-# OpenLayers + Vite
+## OpenLayers + Vite
 
 This example demonstrates how the `ol` package can be used with [Vite](https://vitejs.dev/).
 
