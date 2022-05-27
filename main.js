@@ -12,7 +12,7 @@ import {DragRotate, defaults as defaultInteractions} from 'ol/interaction';
 import {FullScreen, defaults as defaultControls} from 'ol/control';
 
 // const dataJSON = require("./data.json");
-import dataJSON from './data.json'
+import dataJSON from './public/data.json'
 
 // detect device for marker size //
 
@@ -71,7 +71,7 @@ const map = new Map({
     new TileLayer({
       extent: extent,
         source: new TileImage({
-          url: 'maptiles/{z}/{y}/{x}.png'
+          url: './public/maptiles/{z}/{y}/{x}.png'
         })
     })
   ],
