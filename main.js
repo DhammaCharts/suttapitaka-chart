@@ -29,8 +29,8 @@ const deviceType = () => {
 
 // create a SVG that is the same dimension as in D3.js (?)
 
-const width = 3550;
-const height = 3550;
+const width = 4095;
+const height = 4095;
 
 const extent = [0, 0, width, height];
 const projection = new Proj({
@@ -145,27 +145,37 @@ map.on('singleclick', function (event) {
 
     if (map.hasFeatureAtPixel(event.pixel) === true) {
         var coordinate = event.coordinate;
-        console.log(map.getFeaturesAtPixel(event.pixel)[0].values_);
         const dataMap = map.getFeaturesAtPixel(event.pixel)[0].values_;
+
+        // Using data.JSON
+
+        const linkData = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/' + dataMap.id + '">' + dataMap.nameEn + '&emsp;</a>';
+        content.innerHTML = linkData
+        overlay.setPosition(coordinate);
+
+        // Start SuttaPlex API for english titles
+
         // GET Request.
-        fetch('https://suttacentral.net/api/suttaplex/'+dataMap.id,{
-                method: "GET",
-                headers: {"Content-type": "application/json;charset=UTF-8"}
-              }
-            )
-            // Handle success
-            .then(response => response.json())  // convert to json
-            .then(json => {
-              const linkData = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/' + dataMap.id + '"> Data : ' + dataMap.nameEn + '&emsp;</a>';
-              const linkAPI = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/api/suttaplex/'+dataMap.id+'"> API : ' + json[0].translated_title + '&emsp;</a>';
-              content.innerHTML = linkData + '<br>' + linkAPI;
-              overlay.setPosition(coordinate);
-            })
-            .catch(err => {
-              console.log('Request Failed', err); //error details will be in the "err" object
-              content.innerHTML = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/' + dataMap.id + '"> Data : ' + dataMap.nameEn + '&emsp;</a><br>' + "API :" + err + ' at: https://suttacentral.net/api/suttaplex/'+dataMap.id;
-              overlay.setPosition(coordinate);
-            }); // Catch errors
+        // fetch('https://suttacentral.net/api/suttaplex/'+dataMap.id,{
+        //         method: "GET",
+        //         headers: {"Content-type": "application/json;charset=UTF-8"}
+        //       }
+        //     )
+        //     // Handle success
+        //     .then(response => response.json())  // convert to json
+        //     .then(json => {
+        //       const linkData = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/' + dataMap.id + '"> Data : ' + dataMap.nameEn + '&emsp;</a>';
+        //       const linkAPI = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/api/suttaplex/'+dataMap.id+'"> API : ' + json[0].translated_title + '&emsp;</a>';
+        //       content.innerHTML = linkData + '<br>' + linkAPI;
+        //       overlay.setPosition(coordinate);
+        //     })
+        //     .catch(err => {
+        //       console.log('Request Failed', err); //error details will be in the "err" object
+        //       content.innerHTML = '<a style="font-family:sans-serif; text-decoration: none; color: '+dataMap.color+'" target="_blank" href="https://suttacentral.net/' + dataMap.id + '"> Data : ' + dataMap.nameEn + '&emsp;</a><br>' + "API :" + err + ' at: https://suttacentral.net/api/suttaplex/'+dataMap.id;
+        //       overlay.setPosition(coordinate);
+        //     }); // Catch errors
+
+      // End Suttaplex API
     } else {
         // overlay.setPosition(undefined);
         closer.blur();
