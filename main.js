@@ -89,9 +89,10 @@ const map = new Map({
     maxZoom: 6
   }),
 
+  // controls: defaultControls().extend([new FullScreen()]),
+
   // use ctrl/cmd + drag for rotation //
-  controls: defaultControls().extend([new FullScreen()]),
-    interactions: defaultInteractions({altShiftDragRotate: false}).extend([new DragRotate({condition: platformModifierKeyOnly})]),
+  interactions: defaultInteractions({altShiftDragRotate: false}).extend([new DragRotate({condition: platformModifierKeyOnly})]),
 
 });
 
