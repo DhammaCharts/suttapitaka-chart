@@ -2,6 +2,19 @@
 
 Interactive chart for SuttaCentral.net using D3.js and OpenLayers
 
+The final `dist`is in [gh-page branch](https://github.com/DhammaCharts/suttapitaka-chart/tree/gh-page)
+
+To see the result : https://www.dhammacharts.org/suttapitaka-chart/
+
+## Improvements
+
+ - Use circle instead of marker ?
+ - dark mode
+ - Info popup to say : **ctrl/cmd + drag** to rotate
+ - FullScreen button
+ - Previous button
+
+
 ## OpenLayers + Vite
 
 This example demonstrates how the `ol` package can be used with [Vite](https://vitejs.dev/).
