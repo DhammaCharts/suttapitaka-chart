@@ -11,7 +11,6 @@ import {Stroke, Fill, Style, Circle} from 'ol/style';
 import {DragRotate, defaults as defaultInteractions} from 'ol/interaction';
 import {FullScreen, defaults as defaultControls} from 'ol/control';
 
-// const dataJSON = require("./data.json");
 import dataJSON from './data.json'
 
 // detect device for marker size //
@@ -53,7 +52,6 @@ const overlay = new Overlay({
     },
   },
 });
-
 
  // Add a click handler to hide the popup.
  // @return {boolean} Don't follow the href.
