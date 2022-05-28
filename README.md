@@ -11,6 +11,7 @@ This app was built using OpenLayers + Vite [see getting started exemple](https:/
 ## Improvements
 
  - Use circle instead of marker ?
+ - add translation for popup
  - dark mode
  - Info popup to say : **ctrl/cmd + drag** to rotate
  - FullScreen button
