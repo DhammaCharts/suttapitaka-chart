@@ -19,6 +19,7 @@ This app was built using OpenLayers + Vite. [See getting started exemple](https:
  - Add translation for popup
     - Need the suttaplex API to incorporate the translation title in the JSON
  - Dark mode
+ - create Hi-res Tiles for iPhone and co.
  - Info popup to say : **ctrl/cmd + drag** to rotate
  - FullScreen button
  - Previous button
