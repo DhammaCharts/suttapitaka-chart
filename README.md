@@ -4,6 +4,8 @@ Interactive chart for [SuttaCentral.net](https://suttacentral.net/) using [Sutta
 
 The code for the graph is on [Observable](https://observablehq.com/@7722371e7ecac8bd/suttapitaka)
 
+License : [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+
 The final `dist`is in [gh-page branch](https://github.com/DhammaCharts/suttapitaka-chart/tree/gh-page)
 
 To see the result : https://www.dhammacharts.org/suttapitaka-chart/
