@@ -111,7 +111,12 @@ map.addLayer(vectorLayer);
 
 // add marker to map //
 
-const data = JSON.parse(JSON.stringify(dataJSON));
+let data;
+  try {
+  data  = JSON.parse(dataJSON);
+  } catch(e) {
+  data = dataJSON;
+  }
 
 
 for (let i = 0; i < data.length; i++) {
