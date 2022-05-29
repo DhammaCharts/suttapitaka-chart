@@ -67,6 +67,7 @@ closer.onclick = function () {
 const map = new Map({
   layers: [
     new TileLayer({
+      preload: Infinity,
       extent: extent,
         source: new TileImage({
           url: './maptiles/{z}/{y}/{x}.png'
