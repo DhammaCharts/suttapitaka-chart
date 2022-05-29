@@ -65,6 +65,8 @@ closer.onclick = function () {
 // create map //
 
 const map = new Map({
+  pixelRatio: 1,
+  // pixelRatio: Math.max(2, ol.has.DEVICE_PIXEL_RATIO),
   layers: [
     new TileLayer({
       preload: Infinity,
