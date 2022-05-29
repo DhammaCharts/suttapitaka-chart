@@ -12,7 +12,7 @@ This app was built using OpenLayers + Vite [see getting started exemple](https:/
 
  - Use circle instead of marker ?
  - add translation for popup
-  - Need the suttaplex API to incorporate the translation title in the JSON
+    - Need the suttaplex API to incorporate the translation title in the JSON
  - dark mode
  - Info popup to say : **ctrl/cmd + drag** to rotate
  - FullScreen button
