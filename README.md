@@ -18,7 +18,8 @@ This app was built using OpenLayers + Vite. [See getting started exemple](https:
     - This might improve the click area
  - Add translation for popup
     - Need the suttaplex API to incorporate the translation title in the JSON
-    - see https://discourse.suttacentral.net/t/api-documentation-question/24410/3 it looks like https://suttacentral.net/api/suttaplex/mn1?language=fr gives the translated title ;-)
+    - See https://discourse.suttacentral.net/t/api-documentation-question/24410/3 it looks like https://suttacentral.net/api/suttaplex/mn1?language=fr gives the translated title ;-)
+    - Unfortunately, very few titles are available in translation and the nodes are not translated.
  - Dark mode
  - create Hi-res Tiles for iPhone and co.
  - Info popup to say : **ctrl/cmd + drag** to rotate
