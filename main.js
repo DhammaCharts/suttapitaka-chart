@@ -74,7 +74,6 @@ const map = new Map({
       extent: extent,
       source: new TileImage({
         url: './maptiles/{z}/{y}/{x}.png',
-        tilePixelRatio: 2
       })
     })
   ],
@@ -88,7 +87,7 @@ const map = new Map({
   view: new View({
     projection: projection,
     center: getCenter(extent),
-    zoom: 1,
+    zoom: 2,
     maxZoom: 6
   }),
 
@@ -186,7 +185,7 @@ map.on('singleclick', function (event) {
 
       // End Suttaplex API
     } else {
-        // overlay.setPosition(undefined);
+        overlay.setPosition(undefined);
         closer.blur();
     }
 });
